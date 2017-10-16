@@ -1,0 +1,9 @@
+---
+- name: Deploy a Web Application
+  hosts: db_and_web_server
+  vars_files:
+   - vars/git_info.yml
+  roles:
+    - Python
+    - mysql-db
+    - flask-web
